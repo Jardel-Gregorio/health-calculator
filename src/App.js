@@ -1,11 +1,16 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import Input from './components/Input';
 
 export default function ImcApp() {
   return (
-    <View>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View>
+        <StatusBar style="auto" />
+        <Input />
+      </View>
+    </SafeAreaView>
   );
 }
