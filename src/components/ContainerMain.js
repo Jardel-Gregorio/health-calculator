@@ -12,8 +12,7 @@ export default function ContainerMain({children}) {
 
 const styles = StyleSheet.create({
     container: {
-        width: "100%",
-        height: "30%",
+        flex: 1,
         alignItems: 'center',
         padding: 24
     },

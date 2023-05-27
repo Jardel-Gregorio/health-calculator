@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 export default function ButtonGender(props) {
     const {
