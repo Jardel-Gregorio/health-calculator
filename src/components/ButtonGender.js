@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     buttonActive: {
         backgroundColor: 'red',
         borderWidth: 2,
-        borderColor: 'green'
+        borderColor: 'white'
     },
     text: {
         textAlign:'center',

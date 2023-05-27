@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 
-export default function ContainerButtonGender({children}) {
+export default function ContainerDouble({children}) {
     return (
         <View style={styles.container}>
             {children}
@@ -10,10 +10,10 @@ export default function ContainerButtonGender({children}) {
     
 const styles = StyleSheet.create({
     container: {
-        marginTop: 30,
-        width: '80%',
+        width: '90%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 10
     },
 });
