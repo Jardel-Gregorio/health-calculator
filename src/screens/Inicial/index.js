@@ -13,14 +13,14 @@ import { statusPeso } from "../../utils/statusPeso";
 import { calculaIMC } from "../../utils/calculaIMC";
 
 export default function Home () {
-    const [ ativo, setAtivo ] = useState('Homem')
+    const [ sexo, setSexo ] = useState('Homem')
     const [ imc, setImc ] = useState('');
     const [ peso, setPeso ] = useState('');
     const [ altura, setAltura ] = useState('');
 
     const [ edit, setEdit ] = useState(true);
 
-    const [ imagem, situacaoPeso ] = statusPeso(imc);
+    const [ imagem, situacaoPeso ] = statusPeso(imc, sexo);
 
     const calcula = () => {
         if (peso && altura) {
@@ -42,17 +42,17 @@ export default function Home () {
 
     return (
         <Container>
-            <Text style={{fontSize:16 ,color:'white'}}>Selecione gênero</Text>
+            <Text style={{fontSize:16 ,color:'white'}}>Selecione sexo</Text>
             <ContainerDouble>
                 <ButtonGender
                     title="Homem" 
-                    ativo={ativo} 
-                    setAtivo={setAtivo}
+                    sexo={sexo} 
+                    setSexo={setSexo}
                 />
                 <ButtonGender 
                     title="Mulher"
-                    ativo={ativo} 
-                    setAtivo={setAtivo}
+                    sexo={sexo} 
+                    setSexo={setSexo}
                 />
             </ContainerDouble>
             <ContainerDouble>
@@ -75,7 +75,7 @@ export default function Home () {
             <ContainerResult edit={edit}>
                 <Text style={{fontSize:16, fontWeight: "bold"}}>Seu resultado é:</Text>
                 <Text style={{fontSize:30, fontWeight: "bold"}}>{imc}</Text>
-                <ImageResult sexo={ativo}/>
+                <ImageResult source={imagem}/>
                 <Text style={{fontSize:24, fontWeight: "bold"}}>{situacaoPeso}</Text>
             </ContainerResult>
         </Container>                           

@@ -3,15 +3,15 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 export default function ButtonGender(props) {
     const {
         title,
-        ativo,
-        setAtivo
+        sexo,
+        setSexo
     } = props;
 
   const { button, buttonActive } = styles;
-  const finalButton = ativo === title ? [button, buttonActive] : button;
+  const finalButton = sexo === title ? [button, buttonActive] : button;
 
     const handleTouchableOpacityPress = () => {
-        setAtivo(title);
+        setSexo(title);
     };
     
     return (
