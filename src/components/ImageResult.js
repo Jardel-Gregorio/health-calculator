@@ -12,13 +12,11 @@ import imageMulher4 from '../assets/images/woman-4.jpg';
 import imageMulher5 from '../assets/images/woman-5.jpg';
 import imageMulher6 from '../assets/images/woman-6.jpg';
 
-export default function ImageResult(props) {
-    const { sexo, acao } = props;
-
+export default function ImageResult() {
     return (
         <Image 
             style={styles.image}
-            source={imageMulher2} 
+            source={imageMulher6} 
             resizeMode="contain"
         />
     );

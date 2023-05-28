@@ -3,6 +3,7 @@ import { apenasNumero } from '../utils/apenasNumero';
 
 export default function InputNumber(props) {
     const {
+        edit,
         title,
         placeholder,
         numero,
@@ -13,6 +14,8 @@ export default function InputNumber(props) {
         <View style={styles.container}>
             <Text  style={styles.text}>{title}</Text>
             <TextInput
+                editable={edit}
+                keyboardType='numeric'
                 style={styles.input}
                 placeholder={placeholder}
                 value={numero}
