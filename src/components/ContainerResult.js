@@ -1,9 +1,8 @@
 import { StyleSheet, View } from 'react-native';
 
-export default function ContainerResult({children}) {
-    
+export default function ContainerResult({edit, children}) {
     return (
-        <View style={styles.container}>
+        <View style={edit ? {display: 'none'} : styles.container}>
             {children}
         </View>
     );

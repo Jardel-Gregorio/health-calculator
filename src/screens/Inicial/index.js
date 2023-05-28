@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, Keyboard, Text } from "react-native";
+import { Alert, Keyboard, Text, View } from "react-native";
 
 import ButtonGender from "../../components/ButtonGender";
 import ButtonResult from "../../components/ButtonResult";
@@ -72,13 +72,12 @@ export default function Home () {
                 />
             </ContainerDouble>
             <ButtonResult title={edit ? "Calcular" : "Reiniciar"} acao={edit ? calcula : reinicia} />
-
-            <ContainerResult>
+            <ContainerResult edit={edit}>
                 <Text style={{fontSize:16, fontWeight: "bold"}}>Seu resultado é:</Text>
                 <Text style={{fontSize:30, fontWeight: "bold"}}>{imc}</Text>
                 <ImageResult sexo={ativo}/>
                 <Text style={{fontSize:24, fontWeight: "bold"}}>{situacaoPeso}</Text>
             </ContainerResult>
-        </Container>
+        </Container>                           
     )
-}
+}                                                                  
