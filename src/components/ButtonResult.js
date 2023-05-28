@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     button: {
         width: "90%",
         backgroundColor: 'deepskyblue',
-        borderRadius: 8
+        borderRadius: 8,
+        marginBottom: 20
     },
     text: {
         textAlign:'center',
